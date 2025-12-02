@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contato — Sabor Douradense</title>
+
+  <style>
+    /* ====== FUNDO ANIMADO COM EMOJIS ====== */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffe7ec;
+      overflow-x: hidden;
+    }
+
+    .emoji-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .emoji {
+      position: absolute;
+      font-size: 40px;
+      animation: flutuar 18s infinite linear;
+    }
+
+    @keyframes flutuar {
+      0% { transform: translateY(120vh) rotate(0deg); }
+      100% { transform: translateY(-20vh) rotate(360deg); }
+    }
+
+    /* ====== MENU ====== */
+    nav {
+      background: #ff6fa8;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav a.ativo {
+      text-decoration: underline;
+    }
+
+    /* ====== FORMULÁRIO ====== */
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .contato-form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ffb3d1;
+    }
+
+    .contato-form h2 {
+      text-align: center;
+      color: #ff4f8b;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid #ff9cc3;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .btn-rosa {
+      background: #ff6fa8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 18px;
+      width: 100%;
+    }
+
+    /* ====== HISTÓRICO ====== */
+    .historico {
+      margin-top: 40px;
+    }
+
+    .historico h3 {
+      text-align: center;
+      color: #ff4f8b;
+      margin-bottom: 15px;
+    }
+
+    .historico iframe {
+      width: 100%;
+      height: 350px;
+      border: 3px solid #ff9cc3;
+      border-radius: 15px;
+      background: white;
+    }
+
+    /* ====== RODAPÉ ====== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #ff6fa8;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+
+  <script>
+    // GERAR EMOJIS NO FUNDO
+    document.addEventListener("DOMContentLoaded", () => {
+      const emojis = ["🍦","🍨","🍧","🍡","🍬","🍭","🧁"];
+      const bg = document.querySelector(".emoji-bg");
+
+      for (let i = 0; i < 25; i++) {
+        let e = document.createElement("div");
+        e.className = "emoji";
+        e.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+        e.style.left = Math.random() * 100 + "vw";
+        e.style.animationDelay = Math.random() * 10 + "s";
+        e.style.fontSize = (30 + Math.random() * 30) + "px";
+        bg.appendChild(e);
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div class="emoji-bg"></div>
+
+  <!-- MENU -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html" class="ativo">Contato</a>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container">
+    <main class="contato-form">
+
+      <h2>Fale Conosco 💌</h2>
+
+      <form action="mural.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit" class="btn-rosa">Enviar</button>
+      </form>
+
+      <!-- HISTÓRICO FUNCIONANDO -->
+      <section class="historico">
+        <h3>📋 Histórico de mensagens</h3>
+        <iframe src="mural_exibir.php"></iframe>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    📞 (67) 99999-9999 — ✉️ contato@sabordouradense.com.br
+  </footer>
+
+</body>
+</html>

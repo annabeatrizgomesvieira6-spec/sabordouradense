@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Sabor Douradense</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="carrinho.js"></script>
+</head>
+<body class="cardapio">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <header>🍧 Cardápio</header>
+
+  <main>
+    <section class="produtos-container">
+      <h2>🍦 Sorvetes</h2>
+      <div class="produtos-grid">
+
+        <!-- SORVETES -->
+        <div class="produto"><h3>🍓 Morango</h3><p>R$ 5,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Morango', 5)">Adicionar</button></div>
+        <div class="produto">
+        <img src="img/milk_chocolate.png" class="foto-produto">
+        <h3>🍫 Chocolate 500ml</h3>
+        <p>R$ 9,50</p>
+        <button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Chocolate 500ml', 9.5)">Adicionar</button>
+    </div>
+
+        <div class="produto"><h3>🍦 Creme</h3><p>R$ 4,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Creme', 4.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍌 Banana</h3><p>R$ 5,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Banana', 5)">Adicionar</button></div>
+        <div class="produto"><h3>🍪 Flocos</h3><p>R$ 5,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Flocos', 5.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍯 Doce de Leite</h3><p>R$ 6,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Doce de Leite', 6)">Adicionar</button></div>
+        <div class="produto"><h3>🍫🍌 Chocolate com Banana</h3><p>R$ 6,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Chocolate com Banana', 6)">Adicionar</button></div>
+        <div class="produto"><h3>🍨 Napolitano</h3><p>R$ 5,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete Napolitano', 5)">Adicionar</button></div>
+        <div class="produto"><h3>🥭 Manga</h3><p>R$ 4,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Manga', 4.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍋 Limão</h3><p>R$ 4,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Limão', 4)">Adicionar</button></div>
+        <div class="produto"><h3>🥥 Coco</h3><p>R$ 4,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Coco', 4.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍎 Maçã Verde</h3><p>R$ 5,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Sorvete de Maçã Verde', 5)">Adicionar</button></div>
+
+      </div>
+
+      <h2>🥤 Milkshakes</h2>
+      <div class="produtos-grid">
+
+        <!-- MILKSHAKES -->
+        <div class="produto"><h3>🍓 Morango 500ml</h3><p>R$ 9,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Morango 500ml', 9)">Adicionar</button></div>
+        <div class="produto"><h3>🍫 Chocolate 500ml</h3><p>R$ 9,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Chocolate 500ml', 9.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍦 Baunilha 500ml</h3><p>R$ 8,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Baunilha 500ml', 8.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍌 Banana 500ml</h3><p>R$ 9,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Banana 500ml', 9)">Adicionar</button></div>
+        <div class="produto"><h3>🍪 Flocos 500ml</h3><p>R$ 9,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Flocos 500ml', 9.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍓🍫 Morango com Chocolate 700ml</h3><p>R$ 11,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake Morango com Chocolate 700ml', 11)">Adicionar</button></div>
+        <div class="produto"><h3>🍯 Doce de Leite 700ml</h3><p>R$ 11,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Doce de Leite 700ml', 11.5)">Adicionar</button></div>
+        <div class="produto"><h3>🍨 Napolitano 700ml</h3><p>R$ 10,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake Napolitano 700ml', 10)">Adicionar</button></div>
+        <div class="produto"><h3>🍋 Limão 500ml</h3><p>R$ 8,50</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Limão 500ml', 8.5)">Adicionar</button></div>
+        <div class="produto"><h3>🥥 Coco 700ml</h3><p>R$ 10,00</p><button class="btn-rosa" onclick="adicionarCarrinho('Milkshake de Coco 700ml', 10)">Adicionar</button></div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- CARRINHO -->
+  <div id="cart" onclick="mostrarCarrinho()">
+    🛒 <span id="cart-count">0</span>
+  </div>
+
+  <!-- ÁREA DE PAGAMENTO -->
+  <div id="checkout" class="hidden">
+    <h2>🧾 Finalizar Compra</h2>
+    <p id="checkout-list"></p>
+    <p id="checkout-total"></p>
+
+    <label for="pagamento">Forma de pagamento:</label>
+    <select id="pagamento">
+      <option value="pix">📱 Pix</option>
+      <option value="cartao">💳 Cartão</option>
+    </select>
+
+    <button onclick="finalizarCompra()">Confirmar Compra</button>
+  </div>
+  
+
